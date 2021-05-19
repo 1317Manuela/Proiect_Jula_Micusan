@@ -10,7 +10,7 @@ def fereastra1():
     titlu.pack(anchor=N)
     text=Label(fereastra,text="Jula Manuela\nMicusan Roxana\n3.1",font="Jokerman 15",bg="lightblue")
     text.place(x=20,y=370)
-    img=PhotoImage(file="6.png")
+    img=PhotoImage(file="poza1.png")
     imagine=Label(fereastra,image=img)
     imagine.place(x=552,y=81)
     imagine.configure(bg="lightblue")
