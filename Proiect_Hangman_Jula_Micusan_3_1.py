@@ -66,6 +66,37 @@ def fereastra1():
                 cuv=cuv.upper()
             cuvant=Label(text="_ "*len(cuv),font="Jokerman 25",bg="lightblue",width=15)
             cuvant.place(x=350,y=200)
+            cuvant_nou="_ "*len(cuv)
+            def display_img(x):
+                img1 = PhotoImage(file=x)
+                img1 = img1.zoom(2, 2)
+                imagine1 = Label(fereastra3, image=img1)
+                imagine1.photo=img1
+                imagine1.place(x=65,y=85)
+                imagine1.configure(bg="lightblue")
+            def gaseste(event):
+                global valoare
+                global nr_imagini
+                nr_imagini=1
+                litere_folosite=[]
+                valoare = str(litera.get())
+                if valoare in litere_folosite:
+                    display_img(Imagini[nr_imagini])
+                    nr_imagini=nr_imagini+1
+                elif valoare in cuv:
+                    for i in range(len(cuv)):
+                        if cuv[i]==valoare:
+                            cuvant_nou.replace(cuvant_nou,valoare)
+                    litere_folosite.append(valoare)
+            display_img(Imagini[0])
+            nr_imagini=1
+            while nr_imagini!= 6:
+                litera = Entry(fereastra3, width=15)
+                litera.place(x=500, y=400)
+                litera.bind("<Return>", gaseste)
+                lb1=Label(text="Introduceti o litera de tipar:",font="Jokerman 15",bg="lightblue")
+                lb1.place(x=212,y=390)
+                valoare
     b=Button(fereastra,text="Start",font="Jokerman 25",width=6,height=1,command=fereastra_2)
     b.place(x=270,y=350)
     b.configure(bg="lightblue",anchor=CENTER,activebackground="gray")
