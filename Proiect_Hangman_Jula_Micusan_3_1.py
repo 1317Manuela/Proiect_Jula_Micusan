@@ -26,6 +26,6 @@ def fereastra1():
     b.place(x=270,y=170)
     b.configure(bg="lightblue",anchor=CENTER,activebackground="skyblue")
     fereastra.mainloop()
-fereastra1
+fereastra1()
 
 
