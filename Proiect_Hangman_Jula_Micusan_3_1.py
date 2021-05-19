@@ -2,6 +2,9 @@ from Lista_cuvinte import *
 import random
 from tkinter import *
 global x
+global valoare
+global nr_imagini
+global litere_folosite
 def fereastra1():
     fereastra=Tk()
     fereastra.title("Hangman Game")
