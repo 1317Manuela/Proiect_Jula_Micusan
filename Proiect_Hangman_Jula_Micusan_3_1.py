@@ -12,7 +12,7 @@ def fereastra1():
     text.place(x=20,y=370)
     img=PhotoImage(file="poza1.png")
     imagine=Label(fereastra,image=img)
-    imagine.place(x=552,y=81)
+    imagine.place(x=280,y=95)
     imagine.configure(bg="lightblue")
     def fereastra_2():
         fereastra.destroy()
@@ -35,8 +35,8 @@ def fereastra1():
             b.place(x=270, y=400)
             b.configure(bg="lightblue",anchor=CENTER, activebackground="gray")
     b=Button(fereastra,text="Start",font="Jokerman 25",width=6,height=1,command=fereastra_2)
-    b.place(x=270,y=170)
-    b.configure(bg="lightblue",anchor=CENTER,activebackground="skyblue")
+    b.place(x=270,y=350)
+    b.configure(bg="lightblue",anchor=CENTER,activebackground="gray")
     fereastra.mainloop()
 fereastra1()
 
