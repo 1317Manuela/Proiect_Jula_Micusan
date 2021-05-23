@@ -12,6 +12,20 @@ global cuv
 global cu
 global cuvant_nou
 from tkinter import *
+def fereastra_4():
+    global ok
+    global fereastra3
+    fereastra3.destroy()
+    fereastra4 = Tk()
+    fereastra4.title("Hangman Game")
+    fereastra4.configure(bg="lightblue")
+    fereastra4.geometry("700x500")
+    if ok==1:
+        lb4=Label(fereastra4,text="Ai castigat!",font="Jokerman 50",bg="lightblue")
+        lb4.pack(anchor=N)
+    if ok==0:
+        lb5=Label(fereastra4,text="Ai pierdut!",font="Jokerman 50",bg="lightblue")
+        lb5.pack(anchor=N)
 def display_img(x):
     global fereastra3
     img1 = PhotoImage(file=x)
