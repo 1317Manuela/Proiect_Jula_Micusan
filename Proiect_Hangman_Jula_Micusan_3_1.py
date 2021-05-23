@@ -5,6 +5,59 @@ global fereastra2
 global casuta_var
 global x
 from tkinter import *
+def display_img(x):
+    global fereastra3
+    img1 = PhotoImage(file=x)
+    img1 = img1.zoom(2, 2)
+    imagine1 = Label(fereastra3, image=img1)
+    imagine1.photo = img1
+    imagine1.place(x=65, y=65)
+    imagine1.configure(bg="lightblue")
+def fereastra_3():
+    global fereastra2
+    global fereastra3
+    fereastra2.destroy()
+    fereastra3 = Tk()
+    fereastra3.title("Hangman Game")
+    fereastra3.configure(bg="lightblue")
+    fereastra3.geometry("700x500")
+    global x
+    global nr_imagini
+    global litere_folosite
+    global cuv
+    global cuvant_nou
+    litere_folosite=[]
+    if x == "1":
+        lb = Label(text="Ati ales categoria Tari:", font="Jokerman 15", bg="lightblue")
+        lb.pack(anchor=NW)
+        cuv = random.choice(Tari)
+        cuv = cuv.upper()
+    elif x == "2":
+        lb = Label(text="Ati ales categoria Orase:", font="Jokerman 15", bg="lightblue")
+        lb.pack(anchor=NW)
+        cuv = random.choice(Orase)
+        cuv = cuv.upper()
+    elif x == "3":
+        lb = Label(text="Ati ales categoria Animale:", font="Jokerman 15", bg="lightblue")
+        lb.pack(anchor=NW)
+        cuv = random.choice(Animale)
+        cuv = cuv.upper()
+    elif x == "4":
+        lb = Label(text="Ati ales categoria Random:", font="Jokerman 15", bg="lightblue")
+        lb.pack(anchor=NW)
+        cuv = random.choice(Random)
+        cuv = cuv.upper()
+    else:
+        lb = Label(text="Vi se va atribui un cuvant Random:", font="Jokerman 15", bg="lightblue")
+        lb.pack(anchor=NW)
+        cuv = random.choice(Random)
+        cuv = cuv.upper()
+    cuvant_nou = "_ " * len(cuv)
+    cuvant = Label(text=cuvant_nou, font="Jokerman 25", bg="lightblue", width=15)
+    cuvant.place(x=350, y=200)
+    lb1 = Label(text="Introduceti o litera de tipar:", font="Jokerman 15", bg="lightblue")
+    lb1.place(x=212, y=390)
+    display_img(Imagini[0])
 def eval(event):
     global fereastra2
     global x
