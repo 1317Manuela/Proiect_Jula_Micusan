@@ -12,6 +12,20 @@ global cuv
 global cu
 global cuvant_nou
 from tkinter import *
+def fereastra_4():
+    global ok
+    global fereastra3
+    fereastra3.destroy()
+    fereastra4 = Tk()
+    fereastra4.title("Hangman Game")
+    fereastra4.configure(bg="lightblue")
+    fereastra4.geometry("700x500")
+    if ok==1:
+        lb4=Label(fereastra4,text="Ai castigat!",font="Jokerman 50",bg="lightblue")
+        lb4.pack(anchor=N)
+    if ok==0:
+        lb5=Label(fereastra4,text="Ai pierdut!",font="Jokerman 50",bg="lightblue")
+        lb5.pack(anchor=N)
 def display_img(x):
     global fereastra3
     img1 = PhotoImage(file=x)
@@ -44,7 +58,7 @@ def gaseste(event):
                     if cu[i] == valoare:
                         cuvant_nou=cuvant_nou[:i]+valoare+cuvant_nou[i+1:]
                 litere_folosite.append(valoare)
-                cv = Label(text=cuvant_nou, font="Jokerman 25", bg="lightblue", width=15)
+                cv = Label(text=cuvant_nou, font="Jokerman 20", bg="lightblue", width=20)
                 cv.place(x=350, y=200)
             else:
                 nr_imagini = nr_imagini + 1
@@ -104,7 +118,7 @@ def fereastra_3():
         cuv = random.choice(Random)
         cuv = cuv.upper()
     cuvant_nou = "_ " * len(cuv)
-    cuvant = Label(text=cuvant_nou, font="Jokerman 25", bg="lightblue", width=15)
+    cuvant = Label(text=cuvant_nou, font="Jokerman 20", bg="lightblue", width=20)
     cuvant.place(x=350, y=200)
     lb1 = Label(text="Introduceti o litera de tipar:", font="Jokerman 15", bg="lightblue")
     lb1.place(x=212, y=390)
