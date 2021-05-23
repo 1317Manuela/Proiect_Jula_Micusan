@@ -2,4 +2,4 @@ Tari=['Afganistan','Albania','Algeria','Argentina','Armenia','Australia','Austri
 Orase=['Atena','Bucuresti','Budapesta','Londra','Paris','Timisoara','Roma','Viena','Tokyo','Chisinau','Berlin','Arad','Brasov','Sibiu','Constanta','Oradea','Lugoj','Bistrita','Vaslui','Iasi','Resita']
 Animale=['Caine','Pisica','Maimuta','Gaina','Cocos','Leu','Urs','Sarpe','Tigru','Caprioara','Iepure','Oaie','Girafa','Elefant','Foca','Paun','Crocodil']
 Random=['hidrobicicleta','proiect','flaut','telefon','iaurt','covor','calculator','fotoliu','dulap','crizantema','boboc','creion']
-Imagini=["hg1.png","hg2.png","hg3.png","hg4.png","hg5.png","hg6.png","hg7.png","hg8.png"]
+Imagini=["poza1.png","poza2.png","poza3.png","poza4.png","poza5.png","poza6.png","poza7.png","poza8.png"]
