@@ -1,5 +1,5 @@
 Tari=['Afganistan','Albania','Algeria','Argentina','Armenia','Australia','Austria','Belgia','Brazilia','Bulgaria','Canada','Cehia','Columbia','Croatia','Cuba','Danemarca','Egipt','Elvetia','Estonia','Franta','Finlanda','Germania','Grecia','India','Israel','Irlanda','Italia','Jamaica','Japonia','Madagascar','Mexic','Norvegia','Olanda','Polonia','Portugalia','Romania','Rusia','Serbia','Spania','Turcia','Ucraina','Ungaria']
 Orase=['Atena','Bucuresti','Budapesta','Londra','Paris','Timisoara','Roma','Viena','Tokyo','Chisinau','Berlin','Arad','Brasov','Sibiu','Constanta','Oradea','Lugoj','Bistrita','Vaslui','Iasi','Resita']
 Animale=['Caine','Pisica','Maimuta','Gaina','Cocos','Leu','Urs','Sarpe','Tigru','Caprioara','Iepure','Oaie','Girafa','Elefant','Foca','Paun','Crocodil']
-Random=['hidrobicicleta']
+Random=['hidrobicicleta','proiect','flaut','telefon','iaurt','covor','calculator','fotoliu','dulap','crizantema','boboc','creion']
 Imagini=["poza1.png","poza2.png","poza3.png","poza4.png","poza5.png","poza6.png","poza7.png","poza8.png"]
