@@ -4,15 +4,64 @@ global fereastra
 global fereastra2
 global casuta_var
 global x
+global litera
+global ok
+global fereastra3
+global litere_folosite
+global cuv
+global cu
+global cuvant_nou
 from tkinter import *
 def display_img(x):
     global fereastra3
     img1 = PhotoImage(file=x)
-    img1 = img1.zoom(2, 2)
     imagine1 = Label(fereastra3, image=img1)
     imagine1.photo = img1
-    imagine1.place(x=65, y=65)
+    imagine1.place(x=5, y=105)
     imagine1.configure(bg="lightblue")
+def gaseste(event):
+    global litera
+    global fereastra3
+    global valoare
+    global litere_folosite
+    global cuv
+    global cu
+    global ok
+    global cuvant_nou
+    global nr_imagini
+    valoare = str(litera.get())
+    litera.delete(0, END)
+    if nr_imagini!=7:
+        if cu==cuvant_nou:
+            ok=1
+            fereastra_4()
+        else:
+            if valoare in litere_folosite:
+                nr_imagini = nr_imagini + 1
+                display_img(Imagini[nr_imagini])
+            elif valoare in cuv:
+                for i in range(len(cu)):
+                    if cu[i] == valoare:
+                        cuvant_nou=cuvant_nou[:i]+valoare+cuvant_nou[i+1:]
+                litere_folosite.append(valoare)
+                cv = Label(text=cuvant_nou, font="Jokerman 25", bg="lightblue", width=15)
+                cv.place(x=350, y=200)
+            else:
+                nr_imagini = nr_imagini + 1
+                display_img(Imagini[nr_imagini])
+                litere_folosite.append(valoare)
+            lb1 = Label(fereastra3,text='Ati folosit literele:', font="Jokerman 13", bg="lightblue")
+            lb1.place(x=5, y=45)
+            lb = Label(fereastra3, text=litere_folosite, font="Jokerman 13", bg="lightblue")
+            lb.place(x=170, y=45)
+    if nr_imagini==7:
+        ok=0
+        fereastra_4()
+def introduce_litera():
+    global litera
+    litera = Entry(fereastra3, width=15)
+    litera.place(x=500, y=400)
+    litera.bind("<Return>", gaseste)
 def fereastra_3():
     global fereastra2
     global fereastra3
@@ -25,8 +74,10 @@ def fereastra_3():
     global nr_imagini
     global litere_folosite
     global cuv
+    global cu
     global cuvant_nou
     litere_folosite=[]
+    cu=''
     if x == "1":
         lb = Label(text="Ati ales categoria Tari:", font="Jokerman 15", bg="lightblue")
         lb.pack(anchor=NW)
@@ -57,7 +108,11 @@ def fereastra_3():
     cuvant.place(x=350, y=200)
     lb1 = Label(text="Introduceti o litera de tipar:", font="Jokerman 15", bg="lightblue")
     lb1.place(x=212, y=390)
+    for i in range(len(cuv)):
+        cu=cu+cuv[i]+" "
     display_img(Imagini[0])
+    nr_imagini=0
+    introduce_litera()
 def eval(event):
     global fereastra2
     global x
