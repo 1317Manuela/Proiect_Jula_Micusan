@@ -3,7 +3,16 @@ import random
 global fereastra
 global fereastra2
 global casuta_var
+global x
 from tkinter import *
+def eval(event):
+    global fereastra2
+    global x
+    global casuta_var
+    x = str(casuta_var.get())
+    b = Button(fereastra2, text="Incepe Jocul!", font="Jokerman 20", width=12, height=1, command=fereastra_3)
+    b.place(x=230, y=400)
+    b.configure(bg="lightblue", anchor=CENTER, activebackground="gray")
 def fereastra_2():
     global fereastra
     global fereastra2
@@ -15,6 +24,10 @@ def fereastra_2():
     fereastra2.geometry("700x500")
     titlu2 = Label(fereastra2, text="Alegeti categoria dorita:\n1.Tari\n2.Orase\n3.Animale\n4.Random",font="Jokerman 35", bg="lightblue")
     titlu2.pack(anchor=N)
+    casuta_var = Entry(fereastra2, width=15)
+    casuta_var.place(x=290, y=375)
+    casuta_var.bind("<Return>",eval)
+    fereastra2.mainloop()
 def fereastra1():
     global fereastra
     fereastra=Tk()
