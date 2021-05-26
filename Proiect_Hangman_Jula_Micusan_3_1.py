@@ -233,7 +233,3 @@ def fereastra_4():
     fereastra4.mainloop()
 fereastra_0()
 fereastra_4()
-
-
-
-
