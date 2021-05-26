@@ -47,6 +47,8 @@ def gaseste(event):
             if ct==3:
                 fereastra0.destroy()
                 ct=2
+            else:
+                fereastra4.destroy()
         else:
             if valoare in litere_folosite:
                 nr_imagini = nr_imagini + 1
@@ -72,6 +74,8 @@ def gaseste(event):
         if ct==3:
             fereastra0.destroy()
             ct=2
+        else:
+            fereastra4.destroy()
 def introduce_litera():
     global litera
     litera = Entry(fereastra3, width=15)
@@ -151,7 +155,7 @@ def eval(event):
     x = str(casuta_var.get())
     b = Button(fereastra2, text="Incepe Jocul!", font="Jokerman 20", width=12, height=1, command=fereastra_3)
     b.place(x=230, y=400)
-    b.configure(bg="lightblue", anchor=CENTER, activebackground="gray")
+    b.configure(bg="lightblue", activebackground="gray")
 def fereastra_2():
     global fereastra
     global fereastra2
@@ -202,9 +206,33 @@ def fereastra_0():
     b1.place(x=150,y=200)
     b1.configure(bg="lightblue", activebackground="gray")
     fereastra0.mainloop()
-
+def functie_button():
+    global fereastra4
+    fereastra1()
+    fereastra4.withdraw()
+def fereastra_4():
+    global ok
+    global fereastra4
+    global cuvinte_folosite
+    fereastra4 = Tk()
+    fereastra4.title("Hangman Game")
+    fereastra4.configure(bg="lightblue")
+    fereastra4.geometry("700x500")
+    if ok==1:
+        lb4 = Label(fereastra4, text="Ai castigat!", font="Jokerman 50", bg="lightblue")
+        lb4.pack(anchor=N)
+        b1 = Button(fereastra4, text="Retry", font="Jokerman 25", width=6, height=1, command=functie_button)
+        b1.place(x=270, y=150)
+        b1.configure(bg="lightblue", activebackground="gray")
+    if ok==0:
+        lb5=Label(fereastra4,text="Ai pierdut!",font="Jokerman 50",bg="lightblue")
+        lb5.pack(anchor=N)
+        b2 = Button(fereastra4, text="Retry", font="Jokerman 25", width=6, height=1, command=functie_button)
+        b2.place(x=270, y=150)
+        b2.configure(bg="lightblue", activebackground="gray")
+    fereastra4.mainloop()
 fereastra_0()
-
+fereastra_4()
 
 
 
